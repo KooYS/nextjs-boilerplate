@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import tw from 'twin.macro';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
@@ -12,7 +13,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
+        <h1 className="bottom-11 text-blue-800">
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
@@ -21,7 +22,7 @@ export default function Home() {
           <code className={styles.code}>pages/index.tsx</code>
         </p>
 
-        <div className={styles.grid}>
+        <div className={styles.grid} css={tw`border-8 border-blue-800`}>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h2>Documentation &rarr;</h2>
             <p>Find in-depth information about Next.js features and API.</p>

@@ -20,6 +20,6 @@
     }
   },
   "typeRoots": ["./node_modules/@types", "./src/@types"],
-  "include": ["next.config.js", "next-env.d.ts", "**/*.ts", "**/*.tsx", "src"],
+  "include": ["*.config.js", "next-env.d.ts", "**/*.ts", "**/*.tsx", "src"],
   "exclude": ["node_modules"]
 }
