@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "lint:css": "stylelint --ignore-path .gitignore \"src/**/*.{ts,css,scss}\"",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,scss,css,md}\"",
     "prepare": "husky install"
   },
@@ -25,6 +26,8 @@
     "typescript": "4.8.4"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.2.0",
+    "@commitlint/config-conventional": "^17.2.0",
     "@emotion/babel-plugin": "^11.10.5",
     "@typescript-eslint/eslint-plugin": "^5.42.0",
     "@typescript-eslint/parser": "^5.42.0",
@@ -44,12 +47,16 @@
     "lint-staged": ">=10",
     "postcss": "^8.4.18",
     "prettier": "^2.7.1",
+    "stylelint": "^14.14.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^29.0.0",
     "tailwindcss": "^3.2.1",
     "twin.macro": "^2.8.2"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "yarn format",
+      "yarn lint:css",
       "yarn lint:fix"
     ]
   }
